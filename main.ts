@@ -23,9 +23,9 @@ console.log(
   `\nTransferring 0.01 USDC from ${sender.address} to ${receiver.address}...`
 );
 const { transactionHash } = await sender.transfer({
-  to: receiver.address,
-  amount: parseUnits("0.01", 6), // USDC uses 6 decimals
+  to: receiver,
   token: "usdc",
+  amount: parseUnits("0.01", 6), // USDC uses 6 decimals
   network: "base-sepolia",
 });
 
